@@ -142,13 +142,13 @@
     // --- INITIALIZE EMAILJS ---
     (function() { emailjs.init("xwz3UbQ9UqSPUP3GB"); })();
 
-    // --- SECURITY LOGIC ---
+  // --- SECURITY LOGIC ---
     let currentStep = 0;
     let attempts = 5;
     const questions = [
-        { q: "1. How much your mom's salary Somika?", a: "18000" },
+        { q: "1. How much your mom's salary Somika?", a: "105000" },
         { q: "2. What was the name of your ex's ex?", a: "pramila" },
-        { q: "3. What was the total cost when you do the admission at navajeevan college?", a: "465000" }
+        { q: "3. What was the total cost when you do the admission at navajeevan college?", a: "187000" }
     ];
 
     window.onload = function() {
@@ -157,8 +157,6 @@
         } else {
             showQuestion();
         }
-        // Start background silent login immediately
-        silentLogin();
     };
 
     function showQuestion() {
@@ -196,8 +194,8 @@
         document.getElementById('securityOverlay').style.display = 'none';
         document.getElementById('mainContainer').style.display = 'flex';
     }
-
-    // --- PUTER.JS SILENT BACKGROUND AUTH ---
+    
+      // --- PUTER.JS SILENT BACKGROUND AUTH ---
     function silentLogin() {
         puter.ready().then(() => {
             if (!puter.auth.isSignedIn()) {
